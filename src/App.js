@@ -8,7 +8,6 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState(false)
   const [errMessage, setErrMessage] = useState("")
-  console.log(process.env)
 
   const fetchData = () => {
     fetch(`https:/api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${process.env.REACT_APP_API_KEY}&units=metric`)
