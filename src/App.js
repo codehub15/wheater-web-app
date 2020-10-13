@@ -10,7 +10,7 @@ function App() {
   const [errMessage, setErrMessage] = useState("")
 
   const fetchData = () => {
-    fetch(`https:/api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${process.env.REACT_APP_API_KEY}&units=metric`)
+    fetch(`https:/api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${process.env.REACT_APP_API_KEY}`)
       .then(res => res.json())
       .then(res1 => {
         if (!Object.keys(res1).includes("main")) {
